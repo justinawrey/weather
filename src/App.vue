@@ -1,22 +1,34 @@
 <template>
   <div id="app">
-    <WeatherPanel message="hello"/>
-    <WeatherPanel message="hello"/>
+    <WeatherWeek message="hello"/>
+    <WeatherWeek message="hello"/>
   </div>
 </template>
 
 <script>
-import WeatherPanel from "./components/WeatherPanel.vue";
+import WeatherWeek from "./components/WeatherWeek.vue";
 
 export default {
-    components: {
-        WeatherPanel
-    }
+  components: {
+    WeatherWeek
+  }
 };
 </script>
 
 <style lang="scss">
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+}
+
 #app {
-    color: yellow;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 </style>
